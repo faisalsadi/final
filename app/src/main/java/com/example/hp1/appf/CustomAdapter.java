@@ -31,16 +31,10 @@ public class CustomAdapter extends ArrayAdapter<Item> {
 
         TextView title= (TextView)cuView.findViewById(R.id.tv2);
         ImageView image=(ImageView)cuView.findViewById(R.id.iv1);
-        Button btnclick=(Button)cuView.findViewById(R.id.bt1);
 
         title.setText(item.getTitle());
         image.setImageResource(item.getImageid());
-        btnclick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
         return cuView;
 
     }
