@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +14,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 public class Camera extends AppCompatActivity implements View.OnClickListener {
     private Bitmap bitmap;
@@ -92,5 +95,27 @@ public class Camera extends AppCompatActivity implements View.OnClickListener {
 */
             }
         }
+        if(requestCode == 0 && resultCode == RESULT_OK){
+            Bundle extra = data.getExtras();
+            bitmap  = (Bitmap) extra.get("data");
+            //  imageView.setImageBitmap(bitmap);
+
+
+            File root = Environment.getExternalStorageDirectory();
+            File file = new File(root.getAbsolutePath()+"/DCIM/Camera/img.jpg");
+            try
+            {
+                file.createNewFile();
+                FileOutputStream ostream = new FileOutputStream(file);
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, ostream);
+                ostream.close();
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+                Toast.makeText(this,"Failed to save image, try again",Toast.LENGTH_LONG).show();
+            }
+        }
     }
+
 }
