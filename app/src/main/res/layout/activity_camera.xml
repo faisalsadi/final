@@ -12,7 +12,7 @@
         android:id="@+id/btCap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="camera"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="211dp" />
 
@@ -20,7 +20,7 @@
         android:id="@+id/btgalery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="gallery" />
 
     <ImageView
         android:id="@+id/imgphoto"

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.hp1.appf.allmountain">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A mountain bike or mountain bicycle (abbreviated Mtn Bike or MTB) is a bicycle designed for off-road cycling. Mountain bikes share similarities with other bikes, but incorporate features designed to enhance durability and performance in rough terrain. These typically include a front or full suspension, large knobby tires, more durable wheels, more powerful brakes, and lower gear ratios for climbing steep grades. Mountain bikes are typically ridden on mountain trails, singletrack, fire roads, and other unpaved surfaces. This type of terrain commonly has rocks, roots, loose dirt, and steep grades. Many trails have additional TTF's (Technical Trail Features) such as log piles, log rides, rock gardens, skinnies, gap jumps, and wall-rides. Mountain bikes are built to handle these types of terrain and features. The heavy-duty construction combined with stronger rims and wider tires has also made this style of bicycle popular with urban riders and couriers who must navigate through potholes and over curbs" />
+</LinearLayout>
