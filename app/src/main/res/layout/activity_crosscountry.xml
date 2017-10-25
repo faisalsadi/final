@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/aa12"
     tools:context="com.example.hp1.appf.crosscountry">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cross-country bicycles are some of the lightest mountain bikes, typically between 7 and 16 kilograms (15 and 35 lb). They usually feature suspension forks in front and sometimes have suspension in the rear. In both the front and rear, most XC bicycles have approximately 100 millimetres (10.0 cm; 3.9 in) of suspension travel, although some riders prefer 125 to 150 millimetres (12.5 to 15.0 cm; 4.9 to 5.9 in) of travel as bicycle frame strength and technology advance. The geometry of the frames generally place the rider in a little more upright position than on a road bicycle but much less than on a downhill bike." />
+</LinearLayout>
