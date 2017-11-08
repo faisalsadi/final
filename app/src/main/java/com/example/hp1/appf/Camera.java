@@ -1,6 +1,7 @@
 package com.example.hp1.appf;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -27,6 +28,8 @@ public class Camera extends AppCompatActivity implements View.OnClickListener {
     static final int SELECT_IMAGE=1;
     static final int TAKE_IMAGE=0;
 
+    SharedPreferences preferences;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,12 @@ public class Camera extends AppCompatActivity implements View.OnClickListener {
         btGalery = (Button) findViewById(R.id.btgalery);
         btCamera.setOnClickListener(this);
         btGalery.setOnClickListener(this);
+        preferences = getSharedPreferences("mypref",MODE_PRIVATE);
+        String path= preferences.getString("path",null);
+        if(path!=null){
+            bitmap=BitmapFactory.decodeFile(path);
+            imageView.setImageBitmap(bitmap);
+        }
 
         if(!hasCamera()){
             btCamera.setEnabled(false);
